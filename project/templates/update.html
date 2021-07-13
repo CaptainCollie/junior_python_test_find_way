@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    Cities
+{% endblock %}
+
+{% block content %}
+
+    <h1>Edit City</h1>
+
+    {% include 'form.html' with button='Edit' %}
+
+    <p>
+        <a href="{% url 'cities'%}">Back</a>
+    </p>
+{% endblock %}

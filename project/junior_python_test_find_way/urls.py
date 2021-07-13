@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from find_way import views
+from find_way.views import CityDetailView, CityCreateView, CityUpdateView, CityDeleteView, CityListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    path('cities/<int:pk>', CityDetailView.as_view(), name="detail"),
+    path('cities/', CityListView.as_view(), name="cities"),
+    path('add/', CityCreateView.as_view(), name='create'),
+    path('update/<int:pk>', CityUpdateView.as_view(), name='update'),
+    path('delete/<int:pk>', CityDeleteView.as_view(), name='delete'),
 ]
