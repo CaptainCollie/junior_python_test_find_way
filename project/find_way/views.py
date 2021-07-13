@@ -1,12 +1,18 @@
+from django.contrib.messages.views import SuccessMessageMixin
 from django.core.paginator import Paginator
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView, ListView
 from find_way.models import City
-from .forms import HtmlForm, CityForm
+from .forms import CityForm
 
 __all__ = (
-    'cities', 'CityDetailView', 'CityCreateView', 'CityUpdateView', 'CityDeleteView', 'CityListView'
+    'cities',
+    'CityDetailView',
+    'CityCreateView',
+    'CityUpdateView',
+    'CityDeleteView',
+    'CityListView',
 )
 
 
@@ -44,11 +50,12 @@ class CityCreateView(CreateView):
     success_url = reverse_lazy('cities')
 
 
-class CityUpdateView(UpdateView):
+class CityUpdateView(SuccessMessageMixin, UpdateView):
     model = City
     form_class = CityForm
     template_name = "update.html"
     success_url = reverse_lazy('cities')
+    success_message = "City is edited successfully"
 
 
 class CityDeleteView(DeleteView):
