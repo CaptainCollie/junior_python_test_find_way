@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    Trains
+{% endblock %}
+
+{% block content %}
+
+    <h1>Add Train</h1>
+
+    {% include 'form.html' with button='Add' %}
+
+    <p>
+        <a href="{% url 'trains' %}">Back</a>
+    </p>
+{% endblock %}

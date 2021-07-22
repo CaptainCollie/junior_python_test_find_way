@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ train.name }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ train.name }}</h1>
+
+    <div class="row">
+        <div class="div col-md">
+            {{ train.start_city }} - {{ train.finish_city }} in {{ train.travel_time }} hours.
+        </div>
+    </div>
+    <br>
+    <p>
+        <a href="{% url 'trains' %}">Back</a>
+    </p>
+{% endblock %}

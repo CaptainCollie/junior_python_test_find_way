@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block title %}
-    Cities
+    Trains
 {% endblock %}
 
 {% block content %}
 
-    <h1>Cities</h1>
+    <h1>Trains</h1>
 
     <p>
-        <a href="{% url 'create' %}">Add City</a>
+        <a href="{% url 'createtr' %}">Add Train</a>
     </p>
 
     <div class="row">
@@ -16,7 +16,10 @@
             <table class="table table">
                 <thead>
                 <tr>
-                    <th scope="col">City</th>
+                    <th scope="col">Number</th>
+                    <th scope="col">Start</th>
+                    <th scope="col">Finish</th>
+                    <th scope="col">Travel Time</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                 </tr>
@@ -24,17 +27,26 @@
                 {% for object in page_obj %}
                     <tr>
                         <td>
-                            <a href="{% url 'detail' pk=object.pk %}">{{ object.name }}</a>
+                            <a href="{% url 'detailtr' pk=object.pk %}">{{ object.name }}</a>
                         </td>
                         <td>
-                            <a href="{% url 'update' pk=object.pk %}">
+                            {{ object.start_city }}
+                        </td>
+                        <td>
+                            {{ object.finish_city }}
+                        </td>
+                        <td>
+                            {{ object.travel_time }} hours
+                        </td>
+                        <td>
+                            <a href="{% url 'updatetr' pk=object.pk %}">
                                 <button class="btn btn-outline-success" type="submit"
                                         style="height: 5%; margin-left: 5px">Edit
                                 </button>
                             </a>
                         </td>
                         <td>
-                            <a href="{% url 'delete' pk=object.pk %}">
+                            <a href="{% url 'deletetr' pk=object.pk %}">
                                 <button class="btn btn-outline-danger" type="submit"
                                         style="height: 5%; margin-left: 5px">Delete
                                 </button>
