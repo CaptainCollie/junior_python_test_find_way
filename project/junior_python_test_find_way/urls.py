@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+import ways.views
 from find_way import views
 from find_way.views import CityDetailView, CityCreateView, CityUpdateView, CityDeleteView, CityListView
 from trains.views import TrainDetailView, TrainListView, TrainCreateView, TrainUpdateView, TrainDeleteView
@@ -31,5 +33,7 @@ urlpatterns = [
     path('trains/', TrainListView.as_view(), name="trains"),
     path('addtr/', TrainCreateView.as_view(), name='createtr'),
     path('updatetr/<int:pk>', TrainUpdateView.as_view(), name='updatetr'),
-    path('deletetr/<int:pk>', TrainDeleteView.as_view(), name='deletetr')
+    path('deletetr/<int:pk>', TrainDeleteView.as_view(), name='deletetr'),
+    path('ways/', ways.views.home, name='ways'),
+    path('find_way/', ways.views.find_way, name='find_way')
 ]

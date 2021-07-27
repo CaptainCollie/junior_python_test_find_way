@@ -13,10 +13,10 @@ class TrainForm(forms.ModelForm):
         'placeholder': 'Travel Time',
     }))
     start_city = forms.ModelChoiceField(label='', queryset=City.objects.all(), widget=forms.Select(attrs={
-        'class': 'form-control me-2',
+        'class': 'form-control me-2 js-basic-single',
     }))
     finish_city = forms.ModelChoiceField(label='', queryset=City.objects.all(), widget=forms.Select(attrs={
-        'class': 'form-control me-2',
+        'class': 'form-control me-2 js-basic-single',
     }))
 
     class Meta:

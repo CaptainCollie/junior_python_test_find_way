@@ -1,0 +1,85 @@
+DEBUG 2021-07-24 15:35:29,422 utils
+DEBUG 2021-07-24 15:35:29,426 utils
+DEBUG 2021-07-24 15:35:34,808 utils
+DEBUG 2021-07-24 15:35:34,815 utils
+DEBUG 2021-07-24 15:35:34,821 utils
+DEBUG 2021-07-24 15:35:36,022 utils
+DEBUG 2021-07-24 15:35:36,027 utils
+DEBUG 2021-07-24 15:35:36,032 utils
+DEBUG 2021-07-24 15:35:43,655 utils
+DEBUG 2021-07-24 15:35:43,655 utils
+DEBUG 2021-07-24 15:35:43,656 utils
+DEBUG 2021-07-24 15:35:43,657 utils
+DEBUG 2021-07-24 15:35:43,658 utils
+DEBUG 2021-07-24 15:35:43,659 utils
+DEBUG 2021-07-24 15:35:43,663 utils
+DEBUG 2021-07-24 15:35:43,668 utils
+DEBUG 2021-07-24 15:35:43,673 utils
+DEBUG 2021-07-24 15:35:51,479 utils
+DEBUG 2021-07-24 15:35:51,479 utils
+DEBUG 2021-07-24 15:35:51,480 utils
+DEBUG 2021-07-24 15:35:51,481 utils
+DEBUG 2021-07-24 15:35:51,482 utils
+DEBUG 2021-07-24 15:35:51,483 utils
+DEBUG 2021-07-24 15:35:51,489 utils
+DEBUG 2021-07-24 15:35:51,494 utils
+DEBUG 2021-07-24 15:35:51,498 utils
+DEBUG 2021-07-24 15:36:46,749 utils (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2021-07-24 15:36:46,752 utils (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+DEBUG 2021-07-24 15:36:50,108 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:36:50,118 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:36:50,124 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:36:57,926 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" WHERE "find_way_city"."id" = 18 LIMIT 21; args=(18,)
+DEBUG 2021-07-24 15:36:57,926 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" WHERE "find_way_city"."id" = 4 LIMIT 21; args=(4,)
+DEBUG 2021-07-24 15:36:57,927 utils (0.000) SELECT (1) AS "a" FROM "find_way_city" WHERE "find_way_city"."id" = 18 LIMIT 1; args=(18,)
+DEBUG 2021-07-24 15:36:57,928 utils (0.000) SELECT (1) AS "a" FROM "find_way_city" WHERE "find_way_city"."id" = 4 LIMIT 1; args=(4,)
+DEBUG 2021-07-24 15:36:57,929 utils (0.000) SELECT (1) AS "a" FROM "ways_way" WHERE ("ways_way"."finish_city_id" = 4 AND "ways_way"."start_city_id" = 18 AND "ways_way"."travel_time" IS NULL AND NOT ("ways_way"."id" IS NULL)) LIMIT 1; args=(4, 18)
+DEBUG 2021-07-24 15:36:57,930 utils (0.000) SELECT "trains_train"."id", "trains_train"."name", "trains_train"."travel_time", "trains_train"."start_city_id", "trains_train"."finish_city_id", "find_way_city"."id", "find_way_city"."name", T3."id", T3."name" FROM "trains_train" INNER JOIN "find_way_city" ON ("trains_train"."start_city_id" = "find_way_city"."id") INNER JOIN "find_way_city" T3 ON ("trains_train"."finish_city_id" = T3."id") ORDER BY "trains_train"."travel_time" ASC; args=()
+DEBUG 2021-07-24 15:36:57,934 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:36:57,939 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:36:57,944 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG utils (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG utils (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+DEBUG utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" WHERE "find_way_city"."id" = 18 LIMIT 21; args=(18,)
+DEBUG utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" WHERE "find_way_city"."id" = 4 LIMIT 21; args=(4,)
+DEBUG utils (0.000) SELECT (1) AS "a" FROM "find_way_city" WHERE "find_way_city"."id" = 18 LIMIT 1; args=(18,)
+DEBUG utils (0.000) SELECT (1) AS "a" FROM "find_way_city" WHERE "find_way_city"."id" = 4 LIMIT 1; args=(4,)
+DEBUG utils (0.000) SELECT (1) AS "a" FROM "ways_way" WHERE ("ways_way"."finish_city_id" = 4 AND "ways_way"."start_city_id" = 18 AND "ways_way"."travel_time" IS NULL AND NOT ("ways_way"."id" IS NULL)) LIMIT 1; args=(4, 18)
+DEBUG utils (0.000) SELECT "trains_train"."id", "trains_train"."name", "trains_train"."travel_time", "trains_train"."start_city_id", "trains_train"."finish_city_id", "find_way_city"."id", "find_way_city"."name", T3."id", T3."name" FROM "trains_train" INNER JOIN "find_way_city" ON ("trains_train"."start_city_id" = "find_way_city"."id") INNER JOIN "find_way_city" T3 ON ("trains_train"."finish_city_id" = T3."id") ORDER BY "trains_train"."travel_time" ASC; args=()
+DEBUG utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:41:34,169 utils (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2021-07-24 15:41:34,175 utils (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+DEBUG 2021-07-24 15:41:34,330 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" WHERE "find_way_city"."id" = 18 LIMIT 21; args=(18,)
+DEBUG 2021-07-24 15:41:34,330 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" WHERE "find_way_city"."id" = 4 LIMIT 21; args=(4,)
+DEBUG 2021-07-24 15:41:34,331 utils (0.000) SELECT (1) AS "a" FROM "find_way_city" WHERE "find_way_city"."id" = 18 LIMIT 1; args=(18,)
+DEBUG 2021-07-24 15:41:34,331 utils (0.000) SELECT (1) AS "a" FROM "find_way_city" WHERE "find_way_city"."id" = 4 LIMIT 1; args=(4,)
+DEBUG 2021-07-24 15:41:34,333 utils (0.000) SELECT (1) AS "a" FROM "ways_way" WHERE ("ways_way"."finish_city_id" = 4 AND "ways_way"."start_city_id" = 18 AND "ways_way"."travel_time" IS NULL AND NOT ("ways_way"."id" IS NULL)) LIMIT 1; args=(4, 18)
+DEBUG 2021-07-24 15:41:34,333 utils (0.000) SELECT "trains_train"."id", "trains_train"."name", "trains_train"."travel_time", "trains_train"."start_city_id", "trains_train"."finish_city_id", "find_way_city"."id", "find_way_city"."name", T3."id", T3."name" FROM "trains_train" INNER JOIN "find_way_city" ON ("trains_train"."start_city_id" = "find_way_city"."id") INNER JOIN "find_way_city" T3 ON ("trains_train"."finish_city_id" = T3."id") ORDER BY "trains_train"."travel_time" ASC; args=()
+DEBUG 2021-07-24 15:41:34,347 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:41:34,354 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:41:34,359 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:42:58,194 utils (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+DEBUG 2021-07-24 15:42:58,198 utils (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+DEBUG 2021-07-24 15:42:58,249 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" WHERE "find_way_city"."id" = 18 LIMIT 21; args=(18,)
+DEBUG 2021-07-24 15:42:58,250 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" WHERE "find_way_city"."id" = 4 LIMIT 21; args=(4,)
+DEBUG 2021-07-24 15:42:58,252 utils (0.000) SELECT (1) AS "a" FROM "find_way_city" WHERE "find_way_city"."id" = 18 LIMIT 1; args=(18,)
+DEBUG 2021-07-24 15:42:58,252 utils (0.000) SELECT (1) AS "a" FROM "find_way_city" WHERE "find_way_city"."id" = 4 LIMIT 1; args=(4,)
+DEBUG 2021-07-24 15:42:58,254 utils (0.000) SELECT (1) AS "a" FROM "ways_way" WHERE ("ways_way"."finish_city_id" = 4 AND "ways_way"."start_city_id" = 18 AND "ways_way"."travel_time" IS NULL AND NOT ("ways_way"."id" IS NULL)) LIMIT 1; args=(4, 18)
+DEBUG 2021-07-24 15:42:58,255 utils (0.000) SELECT "trains_train"."id", "trains_train"."name", "trains_train"."travel_time", "trains_train"."start_city_id", "trains_train"."finish_city_id", "find_way_city"."id", "find_way_city"."name", T3."id", T3."name" FROM "trains_train" INNER JOIN "find_way_city" ON ("trains_train"."start_city_id" = "find_way_city"."id") INNER JOIN "find_way_city" T3 ON ("trains_train"."finish_city_id" = T3."id") ORDER BY "trains_train"."travel_time" ASC; args=()
+DEBUG 2021-07-24 15:42:58,270 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:42:58,278 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()
+DEBUG 2021-07-24 15:42:58,283 utils (0.000) SELECT "find_way_city"."id", "find_way_city"."name" FROM "find_way_city" ORDER BY "find_way_city"."name" ASC; args=()

@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from ways.models import Way
+
+admin.site.register(Way)

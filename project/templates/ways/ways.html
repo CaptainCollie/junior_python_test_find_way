@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}
+    Search Ways
+{% endblock %}
+
+{% block content %}
+
+    <h1>Ways</h1>
+
+    {% url 'find_way' as action %}
+    {% include 'form.html' with button='Search' action=action %}
+
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            {% if ways %}
+                <h3>Way from {{ btw.start_city }} to {{ btw.finish_city }}</h3>
+                {% for way in ways %}
+                    <p>Travel Time: {{ way.total_time }} hours</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Train Number</th>
+                            <th scope="col">Start</th>
+                            <th scope="col">Finish</th>
+                            <th scope="col">Travel Time</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for train in way.trains %}
+                            <tr>
+                                <th scope="row">{{ train.name }}</th>
+                                <td>{{ train.start_city }}</td>
+                                <td>{{ train.finish_city }}</td>
+                                <td>{{ train.travel_time }} h</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+    <p>
+        <a href="#">Back</a>
+    </p>
+{% endblock %}
